@@ -11,7 +11,6 @@ class JsonFormatter(jsonlogger.JsonFormatter):
         super().__init__(*args, **kwargs)
         self.hostname = socket.gethostname()
         
-
     def add_fields(self, log_record, record, message_dict):
         """Add @tag, @timestamp, @hostname fields."""
         super().add_fields(log_record, record, message_dict)
@@ -19,4 +18,3 @@ class JsonFormatter(jsonlogger.JsonFormatter):
         log_record['@timestamp'] = datetime_now_utc.isoformat()
         log_record['@hostname'] = self.hostname
         log_record['@tag'] = self.tag
-        
