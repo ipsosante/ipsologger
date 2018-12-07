@@ -28,6 +28,12 @@ $ pip install python-json-logger==0.1.0
 $ pip install git+http://github.com/halkeye/jslog4kube@patch-1#egg=jslog4kube==1.0.4-patch1
 ```
 
+Then install ipsologger himself:
+
+```shell
+$ pip install git+http://github.com/ipsosante/ipsologger@0.1.0#egg=ipsologger==0.1.0
+```
+
 ## Gunicorn
 
 1. Create a gunicorn.conf
