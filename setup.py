@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='ipsologgger',
+    name='ipsologger',
     version='0.1',
     description='Custom json log',
     author='ipso sante',
