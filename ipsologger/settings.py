@@ -154,7 +154,7 @@ if os.environ.get('GUNICORN_LOGGER_USE_SOCKET_HANDLER', False):
             'formatter': 'json-django',
             'filters': ['default']},
              })
-    LOGGING['gunicorn']['handlers'].append('json-gunicorn-socket')
-    LOGGING['gunicorn.access']['handlers'].append('json-gunicorn-access-socket')
-    LOGGING['gunicorn.error']['handlers'].append('json-gunicorn-socket')
-    LOGGING['django']['handlers'].append('json-django-socket')
+    LOGGING['loggers']['gunicorn']['handlers'].append('json-gunicorn-socket')
+    LOGGING['loggers']['gunicorn.access']['handlers'].append('json-gunicorn-access-socket')
+    LOGGING['loggers']['gunicorn.error']['handlers'].append('json-gunicorn-socket')
+    LOGGING['loggers']['django']['handlers'].append('json-django-socket')
