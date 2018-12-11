@@ -148,7 +148,7 @@ if os.environ.get('GUNICORN_LOGGER_USE_SOCKET_HANDLER', False):
             'filters': ['default']},
         'json-django-socket': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
+            'class': 'logging.handlers.SocketHandler',
             'host': socket_host,
             'port': socket_port,
             'formatter': 'json-django',
