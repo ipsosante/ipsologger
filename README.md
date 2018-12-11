@@ -4,12 +4,12 @@
 
 ipsologger aimed to facilated json logging for gunicorn and django.
 
-it contains: 
- 
+it contains:
+
   * a custom formatter based from pythonjsonlogger to add custom fields used by us.
-  
+
   * a declaration of dictconfig use for gunicorn
-  
+
   * an override of gunicorn logger (based on jslog4kube)
 
 ipsologger produce for gunicorn log messages like that:
@@ -52,3 +52,11 @@ access_log_format is used by GunicornLogger to produce json for access file.
 ```shell
 $ bin/gunicorn --config=<path to gunicorn.conf>
 ```
+
+## Log to SocketHandler
+
+In order to log through a socket put in environment variables:
+
+* GUNICORN_LOGGER_USE_SOCKET_HANDLER
+* GUNICORN_LOGGER_SOCKET_HOST (default to 127.0.0.1)
+* GUNICORN_LOGGER_SOCKET_PORT (default to 9000)
